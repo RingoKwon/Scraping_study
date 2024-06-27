@@ -16,5 +16,5 @@ transcript = box.find('div', class_='full-script').get_text(strip = True, separa
 # test
 print(title)
 
-# print( '---') test
+# print( '---')
 print(transcript)
