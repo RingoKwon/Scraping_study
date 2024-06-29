@@ -1,9 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service # add by ringo
+
+
 print(webdriver.__version__)
 website = 'https://www.adamchoi.co.uk/overs/detailed' # https://www.adamchoi.co.uk/overs/detailed
 # /Users/ringokwon/Project/python_project/scraping_study2/chromedriver
 path = '/Users/ringokwon/Project/python_project/scraping_study2/chromedriver'
+
+# Create a Chrome Options object
+chrome_options = Options()
+chrome_options.add_argument("--disable-popup-blocking")
+
 driver = webdriver.Chrome( service=Service(  path)) #add by ringo
 driver.get(website)
 
